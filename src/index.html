@@ -1,12 +1,48 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js"></script>
-        <title>Practica 2</title>
-    </head>
-    <body>
-        hola mundo
-    </body>
+<!DOCTYPE html><html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Notas</title>
+</head>
+
+<body>
+    <span class="titulo"><b>Bienvenido a NOTAS v1.0</b></span>
+    <div class="row">
+        <div class="col1">
+            <div class="card">
+                <div class="row">
+                    <div class="columnCardLeft">
+                        <input class="inputTitle" placeholder="Título" id="titulo">
+                        <textarea class="textAreaCard" placeholder="Escribe aquí" id="contenido"></textarea>
+                    </div>
+                    <div class="columnCardRight">
+                        <button class="button" onclick="changeTitleColor()">Cambiar Color</button>
+                        <button class="button" style="margin-top: 20px;" onclick="changeBodyColor()">Cambiar
+                            Color</button>
+                        <button class="button" style="margin-top: 12.5px;" onclick="cleanText()">Limpiar Texto</button>
+                        <button class="button" style="margin-top: 12.5px;" onclick="saveNote()">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col0">
+            <br>
+            <div class="card" style="visibility: hidden;" id="top">
+                <div class="cardNote">
+                    <div class="row">
+                        <span class="titleCard" id="tituloValor"></span>
+                        <button class="close" onclick="deleteNote()">X</button>
+                    </div>
+                    <div class="divContentCard">
+                        <span class="contentCard" id="contenidoValor"></span>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
 </html>
